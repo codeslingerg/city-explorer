@@ -1,6 +1,8 @@
 //import React
 import React from "react";
 import axios from "axios";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 let mapKey = process.env.REACT_APP_MAP_API_KEY;
 console.log(mapKey);
@@ -14,11 +16,12 @@ class App extends React.Component {
     console.log(result);
   };
 
+  //render out Component
   render() {
     return (
       <>
         City Explorer
-        <button onClick={this.handleGetCities}>Explore!</button>
+        <Button onClick={this.handleGetCities}>Explore!</Button>
       </>
     );
   }
