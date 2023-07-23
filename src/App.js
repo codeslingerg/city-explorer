@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+//import React
+import React from "react";
+import axios from "axios";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let mapKey = process.env.REACT_APP_MAP_API_KEY;
+console.log(mapKey);
+
+//create Component
+class App extends React.Component {
+  handleGetCities = async () => {
+    let result = await axios.get(
+      `https://us1.locationiq.com/v1/search?key=${mapKey}&q=new%20orleans&format=json`
+    );
+    console.log(result);
+  };
+
+  //render out Component
+  render() {
+    return (
+      <>
+        City Explorer
+        <Button onClick={this.handleGetCities}>Explore!</Button>
+      </>
+    );
+  }
 }
 
+//export
 export default App;

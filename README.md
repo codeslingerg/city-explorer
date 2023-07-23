@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Create React App d
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -89,3 +89,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+Name of feature: Lab 06
+
+Estimate of time needed to complete: More than 4 hours
+
+Start time: 1:30pm
+
+Finish time: 5:30pm
+
+Actual time needed to complete: 3+ hours
